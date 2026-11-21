@@ -1,8 +1,8 @@
-const rawApiUrl = process.env.EXPO_PUBLIC_API_URL;
+const rawApiUrl = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:5000/api';
 
-if (!rawApiUrl) {
-  throw new Error(
-    'Missing required environment variable EXPO_PUBLIC_API_URL. Please define it in your mobile/.env file.'
+if (!process.env.EXPO_PUBLIC_API_URL) {
+  console.warn(
+    'Warning: EXPO_PUBLIC_API_URL is not set in mobile/.env. Defaulting to http://localhost:5000/api.'
   );
 }
 
