@@ -1,1 +1,22 @@
-doc/
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+build/
+
+# Expo
+.expo/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Coverage
+coverage/
